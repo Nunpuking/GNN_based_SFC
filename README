@@ -1,0 +1,22 @@
+Settings
+- CUDA driver version: 12.2
+- python3.8.18
+
+python packages
+- torch==2.2.1+cu121
+- numpy==1.24.4
+- pandas==2.0.3
+- sklearn==1.3.2
+
+
+
+Training command (check comments in train.sh)
+- bash train.sh 'GPU_ID' 'LEARNING_METHOD' 'PREDICT_MODE' 'RANDOM_TOPOLOGY' 'RANDOM_DEPLOYMENT' 'PRETRAINED_MODEL' 'MODLE_NAME'
+
+examples
+    supervised learning train         : "bash train.sh 0 SL VNFLevel 0 0 0 GG_RNN"
+    reinforcement learning train      : "bash train.sh 0 REINFORCE VNFLevel 0 0 1 GG_RNN"
+    reinforcement learning train (CS1): "bash train.sh 0 REINFORCE VNFLevel 1 0 1 GG_RNN"
+    reinforcement learning train (CS2): "bash train.sh 0 REINFORCE VNFLevel 1 1 1 GG_RNN"
+
+
